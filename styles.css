@@ -148,6 +148,24 @@ body {
     background-color: #0056b3;
 }
 
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 650px;
+    margin-bottom: 20px;
+    background-color: #0074d9;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+
 @media screen and (max-width: 768px) {
     .project-container {
         flex-direction: column;
@@ -200,10 +218,12 @@ body {
         display: block;
         right: 20px;
         bottom: 20px;
+        background-color: transparent;
     }
 
     .symbol-only {
         font-size: 14px;
+        color: transparent;
     }
 
     .close-button {
@@ -211,4 +231,10 @@ body {
         top: 500px;
         font-size: 26px;
     }
+
+    .button {
+        padding: 8px 16px;
+        margin-left: 120px;
+        margin-bottom: 20px;
+      }
 }
