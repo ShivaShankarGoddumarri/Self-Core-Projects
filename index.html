@@ -14,24 +14,46 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <h1 id="heading">SELF CORE PROJECTS</h1>
+    <h1 class="heading">SELF CORE PROJECTS</h1>
 
-    <div class="project-container">
+    <div class="about-container">
       <div class="about">
-        I am a dedicated individual with a lifelong passion for creating
-        innovative solutions by repurposing waste materials into practical and
-        usable products. Since my childhood, my primary mission has been to
-        contribute to everyday life by inventing novel solutions that streamline
-        tasks, save time, and reduce effort. Throughout my journey, I have
-        consistently generated numerous mini-innovations, each designed to
-        enhance the quality of life and promote sustainability. My commitment to
-        creative problem-solving and my drive to transform discarded materials
-        into valuable resources reflect my unwavering dedication to innovation
-        and sustainability.
+        <p id="text"></p>
       </div>
     </div>
 
-    <div class="project-container">
+    <script>
+      const lines = [
+        "I am a dedicated individual with a lifelong passion for creating innovative solutions by repurposing waste materials into practical and usable products.",
+        "Since my childhood, my primary mission has been to contribute to everyday life by inventing novel solutions that streamline tasks, save time, and reduce effort.",
+        "Throughout my journey, I have consistently generated numerous mini-innovations, each designed to enhance the quality of life and promote sustainability.",
+        "My commitment to creative problem-solving and my drive to transform discarded materials into valuable resources reflect my unwavering dedication to innovation.",
+      ];
+
+      const textElement = document.getElementById("text");
+      let lineIndex = 0;
+      let charIndex = 0;
+
+      function displayText() {
+        if (lineIndex < lines.length) {
+          const line = lines[lineIndex];
+          textElement.textContent = line.substring(0, charIndex);
+          charIndex++;
+          if (charIndex > line.length) {
+            charIndex = 0;
+            lineIndex++;
+          }
+        } else {
+          lineIndex = 0;
+        }
+
+        setTimeout(displayText, 60);
+      }
+
+      displayText();
+    </script>
+
+    <div class="project-container first-project ">
       <div class="image">
         <img
           src="https://github.com/ShivaShankarGoddumarri/User-Images/assets/96565316/7e8cd93b-6a52-4e45-b6ab-1e7832c75040"
@@ -58,7 +80,7 @@
         </p>
 
         <button id="showButton">Show Certificate</button>
-        
+
         <div id="imageModal" class="modal">
           <span class="close-button" id="closeButton">&times;</span>
           <img
@@ -290,7 +312,13 @@
       </div>
     </div>
 
-    <a href="https://shiva-shankar-portfolio.vercel.app/#projects" id="myButton" class="button">Return to Portfolio</a>
+
+    <a
+      href="https://shiva-shankar-portfolio.vercel.app/#projects"
+      id="myButton"
+      class="button"
+      >Return to Portfolio</a
+    >
 
     <div id="goToTopButton" class="top-button">
       <a href="#heading">
