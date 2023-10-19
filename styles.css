@@ -4,6 +4,29 @@ body, h1, p {
     
 }
 
+
+/* aos.css */
+
+/* Define AOS animations */
+[data-aos] {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  [data-aos='fade-up'] {
+    transform: translateY(20px);
+  }
+  
+  [data-aos='fade-up'][data-aos-anchor-placement='top-bottom'] {
+    transform: translateY(50px);
+  }
+  
+  /* Define AOS animation classes */
+  .aos-animate {
+    opacity: 1;
+    transform: none;
+  }
+  
 body {
     font-family: sans-serif;
     background-color: #121212;
